@@ -1,9 +1,8 @@
-require_relative "update_inventory"
+require_relative 'update_inventory'
 
-class Sulfuras <UpdateInventory
-  def update_quality
-    if @quality != 80
-      @quality = 80
-    end
-  end
+# clase para el articulo ulfuras
+class Sulfuras < UpdateInventory
+  def update_quality; end
+
+  def sell_in_stats; end
 end

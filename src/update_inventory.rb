@@ -1,27 +1,22 @@
-require_relative 'item.rb'
+require_relative 'item'
 
-class UpdateInventory <Item
+# actualiza el inventario
+class UpdateInventory < Item
   def stats
     sell_in_stats
     update_quality
   end
 
   def update_quality
-    if @sell_in >0
-      @quality -= 1
-    end
+    @quality -= 1 if @sell_in.positive?
 
-    if @sell_in<0
-      @quality-=2
-    end
+    @quality -= 2 if @sell_in.negative?
 
-    if @quality<0
-      @quality=0
-    end
+    @quality = 0 if @quality.negative?
     @quality = 50 if @quality >= 50
   end
 
   def sell_in_stats
-    @sell_in-=1
+    @sell_in -= 1
   end
 end

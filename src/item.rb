@@ -1,3 +1,4 @@
+# Clase item para aignar a todos los articulos
 class Item
   attr_accessor :name, :sell_in, :quality
 

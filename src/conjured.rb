@@ -1,10 +1,9 @@
-require_relative "update_inventory"
+require_relative 'update_inventory'
 
-class Conjured <UpdateInventory
+# clase del rticulo conjured
+class Conjured < UpdateInventory
   def update_quality
     @quality -= 2
-    if sell_in <= 0
-      @quality-= 2
-    end
+    @quality -= 2 if sell_in <= 0
   end
 end
