@@ -1,9 +1,10 @@
-require_relative 'update_inventory'
+# frozen_string_literal: true
 
+require_relative 'update_inventory'
+# class Aged brie
 class AgedBrie < UpdateInventory
   def update_quality
-    if @quality < 50
-      @quality += @sell_in.negative? ? 2 : 1
-    end
+    @quality += @sell_in.negative? ? 2 : 1
+    return unless @quality < 50
   end
 end

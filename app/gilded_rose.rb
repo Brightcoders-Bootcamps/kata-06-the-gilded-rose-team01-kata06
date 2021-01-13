@@ -1,7 +1,8 @@
-# ...
+# frozen_string_literal: true
+
 require_relative 'identify_item'
 
-# clase gilded rose
+# class gilded rose
 class GildedRose
   attr_reader :items
 
@@ -10,8 +11,6 @@ class GildedRose
   end
 
   def update_quality
-    @items.each do |item|
-      item.stats
-    end
+    @items.each(&:stats)
   end
 end

@@ -1,5 +1,7 @@
-require_relative 'item'
+# frozen_string_literal: true
 
+require_relative 'item'
+# class update inventory
 class UpdateInventory < Item
   def stats
     sell_in_stats

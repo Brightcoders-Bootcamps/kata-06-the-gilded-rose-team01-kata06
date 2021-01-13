@@ -1,10 +1,12 @@
+# frozen_string_literal: true
+
 require_relative 'items/update_inventory'
 require_relative 'items/aged_brie'
 require_relative 'items/sulfuras'
 require_relative 'items/backstage_passes'
 require_relative 'items/conjured'
 
-# clase de identificacion de articulos
+# class identify item
 class IdentifyItem
   def identify(name, sell_in, quality)
     if name.include? 'Conjured'

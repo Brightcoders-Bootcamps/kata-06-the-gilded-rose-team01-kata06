@@ -1,5 +1,7 @@
-require_relative 'update_inventory'
+# frozen_string_literal: true
 
+require_relative 'update_inventory'
+# class sulfuras
 class Sulfuras < UpdateInventory
   def update_quality
     @quality = 80 if @quality != 80

@@ -1,5 +1,7 @@
-require_relative 'update_inventory'
+# frozen_string_literal: true
 
+require_relative 'update_inventory'
+# class backstage passes
 class BackstagePasses < UpdateInventory
   def update_quality
     @quality += if @sell_in > 10

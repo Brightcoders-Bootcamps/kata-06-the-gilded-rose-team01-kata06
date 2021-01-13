@@ -1,4 +1,5 @@
 #!/usr/bin/ruby -w
+# frozen_string_literal: true
 
 require_relative 'gilded_rose'
 require_relative 'identify_item'
@@ -16,8 +17,8 @@ items << identify_item.identify('Backstage passes to a TAFKAL80ETC concert', 10,
 items << identify_item.identify('Backstage passes to a TAFKAL80ETC concert', 5, 49)
 items << identify_item.identify('Conjured Mana Cake', 3, 6)
 
-days = 2
-days = ARGV[0].to_i + 1 if ARGV.size > 0
+days = 16
+days = ARGV[0].to_i + 1 if ARGV.size.positive?
 
 gilded_rose = GildedRose.new items
 (0...days).each do |day|
