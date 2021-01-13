@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative '../../app/items/backstage_passes'
 
 describe BackstagePasses do

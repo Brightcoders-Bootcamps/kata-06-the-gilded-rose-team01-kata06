@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative '../../app/items/conjured'
 
 describe Conjured do

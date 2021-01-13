@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative '../../app/items/update_inventory'
 
 describe UpdateInventory do

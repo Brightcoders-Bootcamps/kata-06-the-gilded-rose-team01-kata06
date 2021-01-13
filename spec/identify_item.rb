@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative '../app/identify_item'
 require_relative '../app/items/aged_brie'
 
