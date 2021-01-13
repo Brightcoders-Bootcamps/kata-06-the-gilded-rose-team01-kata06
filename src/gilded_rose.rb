@@ -1,3 +1,49 @@
+#...
+require_relative "identify_item"
+
+class GildedRose
+  attr_reader :items
+
+  @items = []
+
+  def initialize
+    @items = []
+    identify_item = IdentifyItem.new
+    @items << identify_item.identify("+5 Dexterity Vest", 10, 20)
+    @items << identify_item.identify("Aged Brie", 2, 0)
+    @items << identify_item.identify("Elixir of the Mongoose", 5, 7)
+    @items << identify_item.identify("Sulfuras, Hand of Ragnaros", 0, 80)
+    @items << identify_item.identify("Sulfuras, Hand of Ragnaros", -1, 80)
+    @items << identify_item.identify("Backstage passes to a TAFKAL80ETC concert", 15, 20)
+    @items << identify_item.identify("Backstage passes to a TAFKAL80ETC concert", 10, 49)
+    @items << identify_item.identify("Backstage passes to a TAFKAL80ETC concert", 5, 49)
+    @items << identify_item.identify("Conjured Mana Cake", 3, 6)
+  end
+
+  def update_quality
+    @items.each do |item|
+      item.stats
+    end
+  end
+end
+days = 4
+gilded_rose = GildedRose.new
+#puts gilded_rose.update_quality
+
+if ARGV.size > 0
+  days = ARGV[0].to_i + 1
+end
+
+(0...days).each do |day|
+  puts "-------- day #{day} --------"
+  puts "name, sellIn, quality"
+  puts gilded_rose.update_quality
+  puts ""
+  gilded_rose.update_quality
+end
+=begin
+require_relative 'item'
+
 class GildedRose
 
   def initialize(items)
@@ -69,3 +115,5 @@ class Item
     "#{@name}, #{@sell_in}, #{@quality}"
   end
 end
+=end
+#...
