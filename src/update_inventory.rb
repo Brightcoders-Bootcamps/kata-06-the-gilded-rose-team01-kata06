@@ -9,9 +9,7 @@ class UpdateInventory < Item
 
   def update_quality
     @quality -= 1 if @sell_in.positive?
-
     @quality -= 2 if @sell_in.negative?
-
     @quality = 0 if @quality.negative?
     @quality = 50 if @quality >= 50
   end
