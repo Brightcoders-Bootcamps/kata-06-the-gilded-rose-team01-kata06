@@ -4,6 +4,7 @@ require_relative 'items/sulfuras'
 require_relative 'items/backstage_passes'
 require_relative 'items/conjured'
 
+# clase de identificacion de articulos
 class IdentifyItem
   def identify(name, sell_in, quality)
     if name.include? 'Conjured'
